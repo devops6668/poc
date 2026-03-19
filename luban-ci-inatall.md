@@ -12,7 +12,7 @@ TAG_PREFIX := al2023
 # Image Repository for Dagster/code 
 QUAY_USERNAME := rke2+build
 QUAY_PASSWORD := 9XLLQ9H1OAC770HCWBWIH2B4YI0K5E9VUD64T6NS5EOQCS7TZB4NW518SG1GQM3Y
-HARBOR_SERVER := harbor.luban.paulhome.local
+HARBOR_SERVER := harbor.luban.devops.local
 HARBOR_USERNAME := robot$luban-ci
 HARBOR_PASSWORD := LPv85vJJuDL00YXcC39U6rr0vamwLvCq
 HARBOR_RO_USERNAME := robot$deployer
@@ -224,13 +224,13 @@ Download this 2 images and add custom ca certificate.
 - luban-provisioner
 
 ## Kpack image used when image build 
-- analyze : harbor.luban.paulhome.local/luban-ci/luban-builder:al2023@sha256:8fac8b0af16e88a9f66a188a31f06e827ca6f295b5d47038addcb60f54bd817c
-- build: harbor.luban.paulhome.local/luban-ci/luban-builder:al2023@sha256:8fac8b0af16e88a9f66a188a31f06e827ca6f295b5d47038addcb60f54bd817c
-- completion: harbor.luban.paulhome.local/luban-ci/luban-kpack-buildcompletion:al2023
-- detect: harbor.luban.paulhome.local/luban-ci/luban-builder:al2023@sha256:8fac8b0af16e88a9f66a188a31f06e827ca6f295b5d47038addcb60f54bd817c
-- export: harbor.luban.paulhome.local/luban-ci/luban-builder:al2023@sha256:8fac8b0af16e88a9f66a188a31f06e827ca6f295b5d47038addcb60f54bd817c
-- prepare: harbor.luban.paulhome.local/luban-ci/luban-kpack-buildinit:al2023.1
-- restore: harbor.luban.paulhome.local/luban-ci/luban-builder:al2023@sha256:8fac8b0af16e88a9f66a188a31f06e827ca6f295b5d47038addcb60f54bd817c
+- analyze : harbor.luban.devops.local/luban-ci/luban-builder:al2023@sha256:8fac8b0af16e88a9f66a188a31f06e827ca6f295b5d47038addcb60f54bd817c
+- build: harbor.luban.devops.local/luban-ci/luban-builder:al2023@sha256:8fac8b0af16e88a9f66a188a31f06e827ca6f295b5d47038addcb60f54bd817c
+- completion: harbor.luban.devops.local/luban-ci/luban-kpack-buildcompletion:al2023
+- detect: harbor.luban.devops.local/luban-ci/luban-builder:al2023@sha256:8fac8b0af16e88a9f66a188a31f06e827ca6f295b5d47038addcb60f54bd817c
+- export: harbor.luban.devops.local/luban-ci/luban-builder:al2023@sha256:8fac8b0af16e88a9f66a188a31f06e827ca6f295b5d47038addcb60f54bd817c
+- prepare: harbor.luban.devops.local/luban-ci/luban-kpack-buildinit:al2023.1
+- restore: harbor.luban.devops.local/luban-ci/luban-builder:al2023@sha256:8fac8b0af16e88a9f66a188a31f06e827ca6f295b5d47038addcb60f54bd817c
 - 
 
 # Other
