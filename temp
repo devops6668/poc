@@ -1,1 +1,22 @@
 REQUESTS_CA_BUNDLE , CURL_CA_BUNDLE , or SSL_CERT_FILE
+
+
+#!/bin/bash
+
+NAMESPACE="your-namespace"
+
+for DEPLOY in $(kubectl get deploy -n $NAMESPACE -o jsonpath='{.items[*].metadata.name}')
+do
+  echo "Updating deployment: $DEPLOY"
+
+  kubectl get deploy $DEPLOY -n $NAMESPACE -o json | \
+  jq '
+  (.spec.template.spec.containers[].volumeMounts[] 
+    | select(.name=="ca-cert") 
+    | .mountPath)="/etc/ssl/certs/ca-certificates.crt" |
+  (.spec.template.spec.containers[].volumeMounts[] 
+    | select(.name=="ca-cert") 
+    | .subPath)="ca-certificates.crt"
+  ' | kubectl apply -f -
+
+done
