@@ -24,10 +24,10 @@ done
 {
         "auths": {
                 "harbor.devops.local": {
-                        "auth": "cm9ib3QkaGFyYm9yLXN2YzpUQnFxNW1FVUZrNUJhV0VXVFJiZktkUGRjSVNuT2I4aA=="
+                        "auth": "cm9ib3QkaGFyYm9yLXN2Yz"
                 },
                 "quay-quay-quay-enterprise.apps.lab.devops.local": {
-                        "auth": "ZGV2b3BzK2J1aWxkZXI6NEo1Rk5BVlc0NjVaTDFWSzlZREVHU1hGNURFNU02WDdQTjBIMEdTS0tBNklMRlZLNFdXMlhLUkI0SzZMN0xOSw=="
+                        "auth": "ZGV2b3BzK2J1aWx="
                 }
         }
 }
